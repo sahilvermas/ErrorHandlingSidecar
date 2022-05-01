@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
-builder.Services.AddScoped<IErrorService, ErrorService>();
+builder.Services.AddSingleton<IErrorService, ErrorService>();
 
 var app = builder.Build();
 

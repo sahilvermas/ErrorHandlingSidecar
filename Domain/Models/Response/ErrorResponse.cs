@@ -2,8 +2,14 @@
 
 public class ErrorResponse
 {
-    public string ErrorCode { get; set; } = string.Empty;
-    public string Name { get; set; } = string.Empty;
+    public ErrorResponse()
+    {
+        ErrorCode = "1";
+        Name = "No error found for this code";
+    }
+
+    public string ErrorCode { get; set; }
+    public string Name { get; set; }
     public string ErrorMessage { get; set; } = string.Empty;
     public bool CanRetry { get; set; } = false;
     public short NoOfRetries { get; set; } = 0;

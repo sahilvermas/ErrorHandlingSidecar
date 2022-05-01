@@ -19,7 +19,7 @@ public class ErrorHandlerService : ErrorHandler.ErrorHandlerBase
 
     public override async Task<ErrorResponse> GetErrorResponse(ErrorRequest request, ServerCallContext context)
     {
-        _logger.LogInformation($"Server.Grpc.Services.ErrorHandlerService.GetErrorResponse:: {request.ErrorCode}");
+        _logger.LogInformation($"Error Code {request.ErrorCode}");
 
         var errorSchemaFilePath = _configuration.GetValue<string>("ErrorSchemaPath");
 
